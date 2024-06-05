@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="hero-image">
+  <div class="hero-text">
+    <div class="headlogo mb-3"><img style="height:75px; margin-right:15px;"src="/static/logo.png">Predictify</div>
+    <!-- <h2 class="headline">Your Health is always in the first place</h2> -->
+    <h2 class="headline">Yes, prediction is always better than prevention</h2>
+    <div style="font-size: 20px;">Get a Heads-Up on Your Health by Predicting Heart, Kidney, and Brain Problems Before They Become Serious</div> 
+  </div>
+
+<div class="container-fluid">
+  
+    
+  <div class="container ml-2 mt-4">
+    <div class="serv pb-3 text-center"><h2>Our Prediction Services</h2></div>
+
+  <div class="row text-center ml-4">
+
+    <div class="col-sm-4  mb-5">
+      <div class="card" style="width: 86%;">
+        <a style="text-decoration: none;" href="{{ url_for('kidneym') }}">
+          <div class="card-body">
+        <h5 class="card-title">Kidney Disease</h5>
+          <img src="/static/kidney.jpg" class="card-img">
+            <!-- <p class="card-tex">Learn about heart disease and its related conditions</p> -->
+          </div>
+        </a>
+        </div>
+    </div>
+
+    <div class="col-sm-4 mb-5 ">
+      <div class="card" style="width: 86%;">
+        <a style="text-decoration: none;" class="decor" href="{{ url_for('heartm') }}">
+        <div class="card-body">
+          <h5 class="card-title">Heart Disease</h5>
+          <img src="/static/heart.jpg" class="card-img">
+            <!-- <p class="card-tex">Find out the chance of your heart disease</p>  -->
+          </div>
+        </a>
+        </div>
+    </div>
+
+    <div class="col-sm-4 mb-5">
+      <div class="card" style="width: 86%;">
+        <div class="card-body">
+          <a style="text-decoration: none;" class="decor" href="{{ url_for('brain') }}">
+          <h5 class="card-title">Brain Disease</h5>
+          <img src="/static/brain.jpg" class="card-img" >
+            <!-- <p class="card-tex">Learn what can you do to lower the risk of heart disease</p> -->
+          </div>
+        </a>
+        </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+Flask
+Flask-PyMongo
+gunicorn
+numpy
+os
+pickle
+tensorflow
+PIL
+dotenv
+pandas

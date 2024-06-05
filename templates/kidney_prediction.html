@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+<body>
+  <center>
+    
+    <form action="{{url_for('kidney_prediction')}}" method="post" enctype="multipart/form-data">
+        <!-- <div class="container mt-4 mb-4">
+            <label class="form-label" for="customFile">Default file input example</label>
+            <input type="file" class="form-control" id="customFile" name="file" accept="image/*" onchange="previewImage(event)"/>
+        </div>
+        <br> -->
+        <div class="container">
+
+          <h4 class="drop pt-5 pb-3"><B> Drop your image here </B><img width="40" height="35" src="https://img.icons8.com/plasticine/100/long-arrow-down.png" alt="long-arrow-down"/></h4>
+
+        <div class="container" style="width: 18rem; margin: auto;">
+            <!-- <label class="form-label" for="customFile">Default file input example</label> -->
+            <input type="file" style="height: 0%;" class="form-control" id="customFile" name="file"onchange="previewImage(event)"/>
+            <br>
+            
+            <h4>Image Preview...</h4>
+            <br>
+            <img id="preview" src="/static/dummy.jpg" alt="" class="card-img-top" >
+            <br><br>
+            <button type="submit" class="mt-1 mb-1 btn btn-outline-primary" value="upload">Submit</button>
+          </div>
+        <br>
+    </div>
+    </div>
+
+    </form>
+  </center>
+</body>
+
+<script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var preview = document.getElementById('preview');
+            preview.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+
+
+{% endblock %}

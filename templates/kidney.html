@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="container">
+         <div class="container mt-4 ">
+          <div class="typewriter">
+            <h2>Kidney Disease ...</h2>
+          </div><br>
+          <h5>Redefining Kidney Wellness: Empowering Individuals with Knowledge, Support, and Breakthrough Therapies for a Brighter Tomorrow</h5>
+         </div>
+          
+            <div class="container mt-4">
+            <div class="row text-center mb-4">
+
+              <div class="col-sm mb-2">
+                <div class="card" style="width: 100%;">
+                  <a href="{{ url_for('about_kidney') }}">
+                  <h5 class="card-title">About Kidney disease</h5>
+                    <img src="{{url_for('static', filename='boutkidn.jpg')}}" class="card-img">
+                    <div class="card-body">
+                      <p class="card-tex">Learn about kidney disease and its related conditions</p>
+                    </div>
+                  </a>
+                  </div>
+              </div>
+
+              <div class="col-sm mb-2 ">
+                <div class="card" style="width: 100%;">
+                  <a href="{{ url_for('kidney_prediction') }}">
+                  <div class="card-body">
+                    <h5 class="card-title">predict risk of CKD</h5>
+                    <img src="{{url_for('static', filename='kidneypred.jpg')}}" class="card-img">
+                      <p class="card-tex">Find out the chance of your kidney disease</p> 
+                    </div>
+                  </a>
+                  </div>
+              </div>
+
+              <div class="col-sm">
+                <div class="card" style="width: 100%;">
+                  <div class="card-body">
+                    <a href="{{ url_for('kidney_prevention') }}">
+                    <h5 class="card-title">Prevent Kidney disease</h5>
+                    <img src="{{url_for('static', filename='kidneyprev.jpg')}}" class="card-img" >
+                      <p class="card-tex">how to lower the risk of kidney disease</p>
+                    </div>
+                  </a>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        {% endblock %}
